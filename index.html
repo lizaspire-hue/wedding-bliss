@@ -3,8 +3,59 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Wedding Bliss | Bridal Fitness & Wedding Crechers by LMFIT</title>
-<meta name="description" content="Wedding Bliss by LMFIT: 6–12 month personal training for your wedding or special occasion (online or 1:1, men and women), plus Wedding Crechers – safe, fun children's care for the whole day.">
+<title>Wedding Fitness &amp; Bridal Training | Get Fit for Your Wedding Day | Wedding Bliss</title>
+<meta name="description" content="Get fit for your wedding with Wedding Bliss by LMFIT. Bride and groom wedding fitness plans, online or 1:1 in North London, built around your wedding day. Plus Wedding Crechers childcare.">
+<meta name="keywords" content="fit for wedding, wedding fitness, bride fitness, bridal fitness, bridal training, wedding day fitness, get fit for your wedding, wedding personal trainer, bride to be workout, North London personal trainer, wedding creche">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="Liz Marsland, LMFIT">
+<meta name="theme-color" content="#3E444D">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Wedding Bliss by LMFIT">
+<meta property="og:locale" content="en_GB">
+<meta property="og:title" content="Wedding Fitness &amp; Bridal Training | Get Fit for Your Wedding Day">
+<meta property="og:description" content="Bridal fitness and wedding fitness plans for brides, grooms and wedding parties. Feel strong and confident on your wedding day.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1585556282289-d4d5a7967936?auto=format&fit=crop&w=1200&h=630&q=75">
+<meta property="og:image:alt" content="Smiling bride in a lace dress on her wedding day">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Wedding Fitness &amp; Bridal Training | Wedding Bliss">
+<meta name="twitter:description" content="Get fit for your wedding day with personalised bridal fitness coaching, online or 1:1.">
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1585556282289-d4d5a7967936?auto=format&fit=crop&w=1200&h=630&q=75">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "HealthAndBeautyBusiness",
+      "@id": "#business",
+      "name": "Wedding Bliss by LMFIT",
+      "description": "Wedding fitness and bridal fitness coaching to help brides, grooms and wedding parties get fit for their wedding day, plus Wedding Crechers childcare for wedding guests.",
+      "url": "https://lmfit.uk",
+      "image": "https://images.unsplash.com/photo-1585556282289-d4d5a7967936?auto=format&fit=crop&w=1200&q=75",
+      "areaServed": ["North London", "London", "United Kingdom"],
+      "address": { "@type": "PostalAddress", "addressLocality": "London", "addressRegion": "North London", "addressCountry": "GB" },
+      "sameAs": ["https://www.instagram.com/lmfit_trainer", "https://lmfit.uk"],
+      "founder": { "@id": "#liz" },
+      "keywords": "fit for wedding, wedding fitness, bride fitness, bridal fitness, wedding day",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Wedding services",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Bridal & Wedding Fitness Training", "serviceType": "Wedding fitness personal training", "description": "6–12 month personalised fitness programme for brides, grooms and wedding parties, online or 1:1, planned around your wedding day." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Wedding Crechers", "serviceType": "Wedding childcare", "description": "Safe, fun children's care and activities for the whole wedding day." } }
+        ]
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "#liz",
+      "name": "Liz Marsland",
+      "jobTitle": "Wedding Fitness Coach & Personal Trainer",
+      "hasCredential": ["BSc Sports Science", "Level 3 & 4 Personal Trainer", "CrossFit Level 2 Trainer", "Yoga Teacher"],
+      "sameAs": ["https://www.instagram.com/lmfit_trainer"]
+    }
+  ]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -158,6 +209,25 @@
   .step h3{font-size:1.3rem;margin-bottom:6px}
   .step p{font-size:.9rem}
 
+  /* TESTIMONIALS */
+  .testimonials{background:var(--cream);color:var(--charcoal)}
+  .testimonials h2{color:var(--charcoal)}
+  .testimonials .eyebrow{color:var(--rose-deep);opacity:1}
+  .testimonials .mark{border-color:var(--rose)}
+  .testimonials .mark svg{stroke:var(--rose)}
+  .quote-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:56px}
+  .quote{background:var(--white);padding:44px 34px 34px;display:flex;flex-direction:column;gap:22px;position:relative;box-shadow:0 18px 40px rgba(62,68,77,.08)}
+  .quote::before{content:"\201C";position:absolute;top:-6px;left:28px;font-family:var(--serif);font-size:5.5rem;line-height:1;color:var(--blush)}
+  .quote blockquote{font-family:var(--serif);font-style:italic;font-size:1.3rem;line-height:1.5;color:var(--charcoal)}
+  .quote figcaption{margin-top:auto;padding-top:18px;border-top:1px solid rgba(62,68,77,.14)}
+  .quote figcaption strong{display:block;font-weight:500;font-size:.95rem;color:var(--charcoal)}
+  .quote figcaption span{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--rose-deep)}
+  .quote.blue::before{color:var(--blue)}
+  .quote.blue figcaption span{color:var(--blue-deep)}
+  @media (max-width:960px){.quote-grid{grid-template-columns:1fr;max-width:620px;margin-left:auto;margin-right:auto}}
+
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
   /* CONTACT */
   .contact{background:linear-gradient(120deg,rgba(168,111,128,.9),rgba(79,107,135,.9)),
     url('https://images.unsplash.com/photo-1585556282289-d4d5a7967936?auto=format&fit=crop&w=2000&q=70') center/cover}
@@ -231,9 +301,9 @@
       <div class="mark">
         <svg viewBox="0 0 40 40"><circle cx="15" cy="23" r="9"/><circle cx="25" cy="23" r="9"/><path d="M17 8l3-4 3 4-3 3z"/></svg>
       </div>
-      <p class="eyebrow">Fitness &amp; family care for your big day</p>
-      <h1>Wedding <em>Bliss</em></h1>
-      <p class="lead">Feel strong, confident and radiant as you walk down the aisle – and let the whole family relax and celebrate while our team takes care of the little ones.</p>
+      <p class="eyebrow">Wedding fitness &amp; family care for your big day</p>
+      <h1>Wedding <em>Bliss</em><span class="sr-only"> – Wedding Fitness &amp; Bridal Training</span></h1>
+      <p class="lead">Get fit for your wedding and feel strong, confident and radiant as you walk down the aisle. Then let the whole family relax and celebrate on your wedding day while our team takes care of the little ones.</p>
       <div class="ctas">
         <a href="#training" class="btn solid">Bridal Fitness</a>
         <a href="#crechers" class="btn">Wedding Crechers!</a>
@@ -245,7 +315,7 @@
 <!-- ===================== GETTING READY STRIP ===================== -->
 <section class="strip" aria-label="Brides getting ready">
   <div class="strip-grid">
-    <figure><img src="https://images.unsplash.com/photo-1682226335318-f1911fdef7c1?auto=format&fit=crop&w=800&q=70" alt="Bride getting ready for her wedding" loading="lazy"><figcaption>The morning of</figcaption></figure>
+    <figure><img src="https://images.unsplash.com/photo-1682226335318-f1911fdef7c1?auto=format&fit=crop&w=800&q=70" alt="Bride getting ready on her wedding day" loading="lazy"><figcaption>The morning of</figcaption></figure>
     <figure><img src="https://images.unsplash.com/photo-1525096590600-f5d442a7f796?auto=format&fit=crop&w=800&q=70" alt="Bridesmaid helping bride with her shoes" loading="lazy"><figcaption>Final touches</figcaption></figure>
     <figure><img src="https://images.unsplash.com/photo-1585556282289-d4d5a7967936?auto=format&fit=crop&w=800&q=70" alt="Smiling bride in a lace dress" loading="lazy"><figcaption>Pure joy</figcaption></figure>
     <figure><img src="https://images.unsplash.com/photo-1708739515458-f30d3a0e7dc9?auto=format&fit=crop&w=800&q=70" alt="Bride with her bridesmaid" loading="lazy"><figcaption>Ready, together</figcaption></figure>
@@ -257,7 +327,7 @@
   <div class="wrap reveal">
     <p class="eyebrow">Two ways we make your day blissful</p>
     <h2>Look &amp; feel your best. Enjoy every moment.</h2>
-    <p>Whether you're counting down to a wedding, a milestone birthday or any special occasion, Wedding Bliss brings together expert coaching for you and trusted, joyful childcare for your guests.</p>
+    <p>Whether you're a bride counting down to your wedding day, a groom, or celebrating a milestone birthday, Wedding Bliss brings together expert wedding fitness coaching for you and trusted, joyful childcare for your guests.</p>
     <div class="service-cards">
       <a href="#training" class="scard pink">
         <div class="mark" style="margin:0 auto 20px">
@@ -289,8 +359,8 @@
         </div>
         <p class="eyebrow">Service one</p>
         <h2>Bridal &amp; Special Occasion Fitness</h2>
-        <p>A personal training journey built around your date. Over 6 to 12 months we'll build strength, posture and energy at a sustainable pace – so you feel incredible in your outfit and in your body, long after the day itself.</p>
-        <p>For brides, grooms, wedding parties, and anyone with a special occasion on the horizon.</p>
+        <p>A bridal fitness journey built around your wedding date. Over 6 to 12 months we'll build strength, posture and energy at a sustainable pace – so you're fit for your wedding and feel incredible in your dress and in your body, long after the wedding day itself.</p>
+        <p>Wedding fitness for brides, grooms, wedding parties, and anyone with a special occasion on the horizon.</p>
         <ul class="ticks">
           <li>Personalised strength &amp; conditioning programme mapped to your date</li>
           <li>Posture, core and upper-body focus for that dress or suit</li>
@@ -304,8 +374,8 @@
       <div class="photo-col reveal">
         <div class="photo-stack">
           <!-- Replace with your own photo of you training a happy bride -->
-          <img class="main" src="https://images.unsplash.com/photo-1750698544794-bf1cd7038f92?auto=format&fit=crop&w=1000&q=75" alt="Trainer and happy client together in the gym">
-          <img class="inset" src="https://images.unsplash.com/photo-1758875569256-f37c438cac65?auto=format&fit=crop&w=600&q=75" alt="Client lifting weights with her trainer" loading="lazy">
+          <img class="main" src="https://images.unsplash.com/photo-1750698544794-bf1cd7038f92?auto=format&fit=crop&w=1000&q=75" alt="Wedding fitness coach training a bride-to-be in the gym">
+          <img class="inset" src="https://images.unsplash.com/photo-1758875569256-f37c438cac65?auto=format&fit=crop&w=600&q=75" alt="Bride doing strength training to get fit for her wedding" loading="lazy">
         </div>
       </div>
     </div>
@@ -339,7 +409,7 @@
     <div class="split">
       <div class="reveal">
         <!-- Replace with a photo of Liz -->
-        <img class="about-img" src="https://images.unsplash.com/photo-1589860518300-9eac95f784d9?auto=format&fit=crop&w=900&q=75" alt="Liz Marsland, personal trainer" loading="lazy">
+        <img class="about-img" src="https://images.unsplash.com/photo-1589860518300-9eac95f784d9?auto=format&fit=crop&w=900&q=75" alt="Liz Marsland, bridal and wedding fitness personal trainer" loading="lazy">
       </div>
       <div class="copy reveal">
         <div class="mark">
@@ -461,6 +531,34 @@
   </div>
 </section>
 
+<!-- ===================== TESTIMONIALS ===================== -->
+<!-- Placeholder quotes: replace with real client testimonials (with their permission) before launch. -->
+<section class="testimonials" id="testimonials" aria-labelledby="testimonials-title">
+  <div class="wrap">
+    <div class="center reveal">
+      <div class="mark">
+        <svg viewBox="0 0 40 40"><path d="M20 32s-11-6.5-11-14a6 6 0 0 1 11-3.3A6 6 0 0 1 31 18c0 7.5-11 14-11 14z"/></svg>
+      </div>
+      <p class="eyebrow">Kind words from our brides &amp; families</p>
+      <h2 id="testimonials-title">Loved on the big day</h2>
+    </div>
+    <div class="quote-grid">
+      <figure class="quote reveal">
+        <blockquote><p>Liz built my wedding fitness plan around my shifts and my date. I walked down the aisle feeling strong and confident, and I actually enjoyed every session.</p></blockquote>
+        <figcaption><strong>Sophie &amp; James</strong><span>Bridal fitness · 12 weeks</span></figcaption>
+      </figure>
+      <figure class="quote reveal">
+        <blockquote><p>I wanted to feel fit for my wedding, not starved for it. The programme was realistic, and I had so much energy on the day. I danced until midnight.</p></blockquote>
+        <figcaption><strong>Amira</strong><span>Bride-to-be programme</span></figcaption>
+      </figure>
+      <figure class="quote blue reveal">
+        <blockquote><p>The crèche was the best decision we made. Parents relaxed, the kids had a brilliant time, and our ceremony was calm and quiet.</p></blockquote>
+        <figcaption><strong>Hannah &amp; Tom</strong><span>Wedding Crechers</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
 <!-- ===================== CONTACT ===================== -->
 <section class="contact center" id="contact">
   <div class="wrap reveal">
@@ -484,7 +582,7 @@
       <a href="https://www.instagram.com/lmfit_trainer" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6"/></svg></a>
       <a href="https://lmfit.uk" target="_blank" rel="noopener" aria-label="Website"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg></a>
     </div>
-    <p>Wedding Bliss by <a href="https://lmfit.uk" target="_blank" rel="noopener">LMFIT</a> · North London · © <span id="yr"></span></p>
+    <p>Wedding Bliss by <a href="https://lmfit.uk" target="_blank" rel="noopener">LMFIT</a> · Wedding &amp; bridal fitness in North London · © <span id="yr"></span></p>
   </div>
 </footer>
 
