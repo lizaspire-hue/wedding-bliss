@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wedding Bliss | Bridal Fitness & Wedding Crechers by LMFIT</title>
+<meta name="description" content="Wedding Bliss by LMFIT: 6–12 month personal training for your wedding or special occasion (online or 1:1, men and women), plus Wedding Crechers – safe, fun children's care for the whole day.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blush:#E7B8C3;
+    --rose:#C48B9B;
+    --rose-deep:#A86F80;
+    --blue:#7F9EBB;
+    --blue-deep:#4F6B87;
+    --slate:#5E6672;
+    --charcoal:#3E444D;
+    --grey-soft:#A9AFB8;
+    --cream:#FBF4EA;
+    --white:#FFFFFF;
+    --serif:'Cormorant Garamond', Georgia, serif;
+    --sans:'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--sans);font-weight:300;color:var(--cream);background:var(--charcoal);line-height:1.7}
+  img{max-width:100%;display:block}
+  a{color:inherit}
+  h1,h2,h3{font-family:var(--serif);font-weight:500;color:var(--white);line-height:1.15}
+  h2{font-size:clamp(2.2rem,5vw,3.4rem)}
+  h3{font-size:1.6rem}
+  .eyebrow{font-size:.75rem;letter-spacing:.3em;text-transform:uppercase;font-weight:500;color:var(--cream);opacity:.85}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+  section{padding:96px 0}
+
+  /* White section logo marks */
+  .mark{width:74px;height:74px;border:1.5px solid rgba(255,255,255,.9);border-radius:50%;display:grid;place-items:center;margin-bottom:22px}
+  .mark svg{width:34px;height:34px;stroke:#fff;fill:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+  .center{text-align:center}
+  .center .mark{margin-left:auto;margin-right:auto}
+
+  .btn{display:inline-block;padding:15px 34px;border:1.5px solid var(--white);color:var(--white);text-decoration:none;font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;font-weight:500;transition:.3s;background:transparent}
+  .btn:hover{background:var(--white);color:var(--rose-deep)}
+  .btn.solid{background:var(--white);color:var(--rose-deep)}
+  .btn.solid:hover{background:transparent;color:var(--white)}
+
+  /* NAV */
+  nav{position:fixed;inset:0 0 auto 0;z-index:50;padding:18px 0;transition:.35s}
+  nav.scrolled{background:rgba(62,68,77,.94);backdrop-filter:blur(6px);padding:12px 0}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px}
+  .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+  .brand svg{width:34px;height:34px;stroke:#fff;fill:none;stroke-width:1.4}
+  .brand span{font-family:var(--serif);font-size:1.6rem;color:var(--white);letter-spacing:.04em}
+  .brand small{display:block;font-family:var(--sans);font-size:.6rem;letter-spacing:.3em;color:var(--cream);opacity:.8;margin-top:-4px}
+  .nav-links{display:flex;gap:30px;list-style:none}
+  .nav-links a{text-decoration:none;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--cream);font-weight:500}
+  .nav-links a:hover{color:var(--blush)}
+  .burger{display:none;background:none;border:0;cursor:pointer}
+  .burger svg{width:28px;height:28px;stroke:#fff;stroke-width:1.6}
+
+  /* HERO */
+  .hero{min-height:100vh;position:relative;display:flex;align-items:center;padding:140px 0 90px;
+    /* Soft, pale overlay: gentle blush behind the text, fading to almost clear so the happy bride shines through.
+       To use your own photo, swap the URL below. */
+    background:linear-gradient(100deg,rgba(196,139,155,.70) 0%,rgba(231,184,195,.42) 40%,rgba(251,244,234,.06) 72%,rgba(170,195,220,.12) 100%),
+    url('https://images.unsplash.com/photo-1596092882833-4a5417bc7ac7?auto=format&fit=crop&w=2000&q=80') 65% 30%/cover no-repeat}
+  .hero h1,.hero .eyebrow,.hero p.lead{text-shadow:0 2px 18px rgba(120,80,95,.35)}
+  .hero-inner{max-width:680px}
+  .hero h1{font-size:clamp(3.2rem,9vw,6.4rem);font-weight:400;margin:14px 0 10px}
+  .hero h1 em{font-style:italic;color:var(--cream)}
+  .hero p.lead{font-size:1.1rem;max-width:560px;margin-bottom:34px;color:var(--cream)}
+  .hero .ctas{display:flex;gap:16px;flex-wrap:wrap}
+
+  /* GETTING READY STRIP */
+  .strip{background:var(--blush);padding:0}
+  .strip-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+  .strip-grid figure{position:relative;aspect-ratio:3/4;overflow:hidden}
+  .strip-grid img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
+  .strip-grid figure:hover img{transform:scale(1.05)}
+  .strip-grid figcaption{position:absolute;inset:auto 0 0 0;padding:18px;background:linear-gradient(transparent,rgba(62,68,77,.75));font-family:var(--serif);font-style:italic;font-size:1.2rem;color:var(--white)}
+
+  /* INTRO */
+  .intro{background:var(--slate)}
+  .intro p{max-width:760px;margin:18px auto 0;font-size:1.05rem}
+  .service-cards{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:56px}
+  .scard{padding:44px 36px;text-align:center;text-decoration:none;transition:.3s}
+  .scard.pink{background:var(--rose)}
+  .scard.blue{background:var(--blue-deep)}
+  .scard:hover{transform:translateY(-6px)}
+  .scard p{margin:12px 0 22px}
+
+  /* TRAINING */
+  .training{background:linear-gradient(160deg,var(--rose) 0%,var(--rose-deep) 100%)}
+  .split{display:grid;grid-template-columns:1.05fr 1fr;gap:64px;align-items:center}
+  .split.reverse{grid-template-columns:1fr 1.05fr}
+  .photo-stack{position:relative}
+  .photo-stack .main{width:100%;aspect-ratio:4/5;object-fit:cover;box-shadow:0 30px 60px rgba(0,0,0,.2)}
+  .photo-stack .inset{position:absolute;width:46%;aspect-ratio:1;object-fit:cover;right:-26px;bottom:-34px;border:8px solid var(--cream);box-shadow:0 20px 40px rgba(0,0,0,.2)}
+  .copy p{margin:16px 0}
+  .ticks{list-style:none;margin:24px 0 30px}
+  .ticks li{padding:9px 0 9px 34px;position:relative;border-bottom:1px solid rgba(255,255,255,.22)}
+  .ticks li::before{content:"";position:absolute;left:0;top:15px;width:18px;height:10px;border-left:1.6px solid #fff;border-bottom:1.6px solid #fff;transform:rotate(-45deg)}
+
+  .formats{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:80px}
+  .fcard{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.35);padding:34px 28px;text-align:center}
+  .fcard .mark{margin:0 auto 18px;width:60px;height:60px}
+  .fcard .mark svg{width:28px;height:28px}
+  .fcard h3{margin-bottom:10px}
+  .fcard .len{font-size:.72rem;letter-spacing:.25em;text-transform:uppercase;margin-bottom:12px;display:block;opacity:.85}
+
+  /* ABOUT / QUALS */
+  .about{background:var(--charcoal)}
+  .about .split{grid-template-columns:.9fr 1.1fr}
+  .about-img{width:100%;aspect-ratio:4/5;object-fit:cover;filter:saturate(.9)}
+  .quals{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:28px}
+  .qual{display:flex;gap:14px;align-items:flex-start;padding:16px;background:rgba(255,255,255,.05);border-left:2px solid var(--blush)}
+  .qual svg{flex:0 0 26px;width:26px;height:26px;stroke:#fff;fill:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;margin-top:2px}
+  .qual strong{display:block;font-weight:500;color:var(--white);font-size:.95rem}
+  .qual span{font-size:.85rem;opacity:.85}
+  .stats{display:flex;gap:40px;margin-top:34px;flex-wrap:wrap}
+  .stat b{display:block;font-family:var(--serif);font-size:3rem;font-weight:500;color:var(--blush);line-height:1}
+  .stat small{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase}
+  .clients{margin-top:34px;font-size:.85rem;opacity:.85}
+  .clients b{font-weight:500;color:var(--white)}
+
+  /* CRECHERS */
+  .crechers{background:linear-gradient(160deg,var(--blue) 0%,var(--blue-deep) 100%)}
+  .crechers h2 .bang{font-style:italic;color:var(--blush)}
+  .kids-gallery{display:grid;grid-template-columns:2fr 1fr;grid-template-rows:1fr 1fr;gap:14px;height:560px}
+  .kids-gallery img{width:100%;height:100%;object-fit:cover}
+  .kids-gallery img:first-child{grid-row:span 2}
+  .features{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:80px}
+  .feature{text-align:center;padding:10px}
+  .feature .mark{margin:0 auto 16px;width:64px;height:64px}
+  .feature .mark svg{width:30px;height:30px}
+  .feature h3{font-size:1.35rem;margin-bottom:8px}
+  .feature p{font-size:.9rem}
+
+  .promise{margin-top:70px;background:var(--cream);color:var(--charcoal);padding:48px;display:grid;grid-template-columns:auto 1fr;gap:36px;align-items:center}
+  .promise .mark{border-color:var(--blue-deep);margin:0}
+  .promise .mark svg{stroke:var(--blue-deep)}
+  .promise h3{color:var(--blue-deep);font-size:2rem}
+  .promise ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:6px 30px;margin-top:14px;font-size:.92rem}
+  .promise li::before{content:"♡ ";color:var(--rose)}
+
+  /* STEPS */
+  .steps{background:var(--slate)}
+  .step-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;margin-top:54px;counter-reset:s}
+  .step{border-top:1.5px solid rgba(255,255,255,.5);padding-top:22px}
+  .step::before{counter-increment:s;content:"0" counter(s);font-family:var(--serif);font-size:2.6rem;color:var(--blush);display:block;line-height:1;margin-bottom:10px}
+  .step h3{font-size:1.3rem;margin-bottom:6px}
+  .step p{font-size:.9rem}
+
+  /* CONTACT */
+  .contact{background:linear-gradient(120deg,rgba(168,111,128,.9),rgba(79,107,135,.9)),
+    url('https://images.unsplash.com/photo-1585556282289-d4d5a7967936?auto=format&fit=crop&w=2000&q=70') center/cover}
+  .contact p{max-width:620px;margin:16px auto 34px;font-size:1.05rem}
+  .contact .ctas{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+
+  footer{background:var(--charcoal);padding:40px 0;font-size:.8rem;text-align:center;color:var(--grey-soft)}
+  footer a{color:var(--cream);text-decoration:none}
+  footer .social{display:flex;justify-content:center;gap:18px;margin-bottom:14px}
+  footer .social a{width:40px;height:40px;border:1px solid rgba(255,255,255,.6);border-radius:50%;display:grid;place-items:center}
+  footer .social svg{width:18px;height:18px;stroke:#fff;fill:none;stroke-width:1.5}
+
+  /* Reveal on scroll */
+  .reveal{opacity:0;transform:translateY(30px);transition:opacity .9s ease,transform .9s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  /* RESPONSIVE */
+  @media (max-width:960px){
+    .split,.split.reverse,.about .split{grid-template-columns:1fr;gap:56px}
+    .split.reverse .photo-col{order:-1}
+    .formats{grid-template-columns:1fr}
+    .features,.step-grid{grid-template-columns:1fr 1fr}
+    .strip-grid{grid-template-columns:1fr 1fr}
+    .kids-gallery{height:440px}
+  }
+  @media (max-width:720px){
+    section{padding:72px 0}
+    .nav-links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:rgba(62,68,77,.97);padding:10px 24px 20px}
+    .nav-links.open{display:flex}
+    .nav-links li{padding:12px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+    .burger{display:block}
+    .service-cards,.quals,.promise ul{grid-template-columns:1fr}
+    .features,.step-grid{grid-template-columns:1fr}
+    .promise{grid-template-columns:1fr;padding:34px 26px;text-align:center}
+    .promise .mark{margin:0 auto}
+    .promise ul{text-align:left}
+    .photo-stack .inset{right:-8px;bottom:-24px;width:42%}
+    .kids-gallery{grid-template-columns:1fr;grid-template-rows:auto;height:auto}
+    .kids-gallery img{aspect-ratio:4/3}
+    .kids-gallery img:first-child{grid-row:auto}
+  }
+  @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<!-- ===================== NAV ===================== -->
+<nav id="nav">
+  <div class="wrap">
+    <a href="#top" class="brand" aria-label="Wedding Bliss home">
+      <!-- White logo: interlocking rings -->
+      <svg viewBox="0 0 40 40"><circle cx="15" cy="22" r="9"/><circle cx="25" cy="22" r="9"/><path d="M22 6l3 4 3-4"/></svg>
+      <div><span>Wedding Bliss</span><small>BY LMFIT</small></div>
+    </a>
+    <button class="burger" aria-label="Menu" onclick="document.getElementById('links').classList.toggle('open')">
+      <svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+    <ul class="nav-links" id="links">
+      <li><a href="#training">Bridal Fitness</a></li>
+      <li><a href="#about">About Liz</a></li>
+      <li><a href="#crechers">Wedding Crechers</a></li>
+      <li><a href="#contact">Enquire</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ===================== HERO ===================== -->
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-inner reveal">
+      <div class="mark">
+        <svg viewBox="0 0 40 40"><circle cx="15" cy="23" r="9"/><circle cx="25" cy="23" r="9"/><path d="M17 8l3-4 3 4-3 3z"/></svg>
+      </div>
+      <p class="eyebrow">Fitness &amp; family care for your big day</p>
+      <h1>Wedding <em>Bliss</em></h1>
+      <p class="lead">Feel strong, confident and radiant as you walk down the aisle – and let the whole family relax and celebrate while our team takes care of the little ones.</p>
+      <div class="ctas">
+        <a href="#training" class="btn solid">Bridal Fitness</a>
+        <a href="#crechers" class="btn">Wedding Crechers!</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ===================== GETTING READY STRIP ===================== -->
+<section class="strip" aria-label="Brides getting ready">
+  <div class="strip-grid">
+    <figure><img src="https://images.unsplash.com/photo-1682226335318-f1911fdef7c1?auto=format&fit=crop&w=800&q=70" alt="Bride getting ready for her wedding" loading="lazy"><figcaption>The morning of</figcaption></figure>
+    <figure><img src="https://images.unsplash.com/photo-1525096590600-f5d442a7f796?auto=format&fit=crop&w=800&q=70" alt="Bridesmaid helping bride with her shoes" loading="lazy"><figcaption>Final touches</figcaption></figure>
+    <figure><img src="https://images.unsplash.com/photo-1585556282289-d4d5a7967936?auto=format&fit=crop&w=800&q=70" alt="Smiling bride in a lace dress" loading="lazy"><figcaption>Pure joy</figcaption></figure>
+    <figure><img src="https://images.unsplash.com/photo-1708739515458-f30d3a0e7dc9?auto=format&fit=crop&w=800&q=70" alt="Bride with her bridesmaid" loading="lazy"><figcaption>Ready, together</figcaption></figure>
+  </div>
+</section>
+
+<!-- ===================== INTRO / TWO SERVICES ===================== -->
+<section class="intro center">
+  <div class="wrap reveal">
+    <p class="eyebrow">Two ways we make your day blissful</p>
+    <h2>Look &amp; feel your best. Enjoy every moment.</h2>
+    <p>Whether you're counting down to a wedding, a milestone birthday or any special occasion, Wedding Bliss brings together expert coaching for you and trusted, joyful childcare for your guests.</p>
+    <div class="service-cards">
+      <a href="#training" class="scard pink">
+        <div class="mark" style="margin:0 auto 20px">
+          <svg viewBox="0 0 40 40"><path d="M6 16v8M10 12v16M30 12v16M34 16v8M10 20h20"/></svg>
+        </div>
+        <h3>Bridal &amp; Occasion Fitness</h3>
+        <p>6–12 month personal training, online or 1:1, for women and men.</p>
+        <span class="btn">Discover more</span>
+      </a>
+      <a href="#crechers" class="scard blue">
+        <div class="mark" style="margin:0 auto 20px">
+          <svg viewBox="0 0 40 40"><ellipse cx="20" cy="15" rx="8" ry="10"/><path d="M20 25l-2 3h4z"/><path d="M20 28c0 4-3 5-3 8"/></svg>
+        </div>
+        <h3>Wedding Crechers!</h3>
+        <p>Safe, fun children's activities and care for the whole celebration.</p>
+        <span class="btn">Discover more</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SERVICE 1: TRAINING ===================== -->
+<section class="training" id="training">
+  <div class="wrap">
+    <div class="split">
+      <div class="copy reveal">
+        <div class="mark">
+          <svg viewBox="0 0 40 40"><path d="M6 16v8M10 12v16M30 12v16M34 16v8M10 20h20"/></svg>
+        </div>
+        <p class="eyebrow">Service one</p>
+        <h2>Bridal &amp; Special Occasion Fitness</h2>
+        <p>A personal training journey built around your date. Over 6 to 12 months we'll build strength, posture and energy at a sustainable pace – so you feel incredible in your outfit and in your body, long after the day itself.</p>
+        <p>For brides, grooms, wedding parties, and anyone with a special occasion on the horizon.</p>
+        <ul class="ticks">
+          <li>Personalised strength &amp; conditioning programme mapped to your date</li>
+          <li>Posture, core and upper-body focus for that dress or suit</li>
+          <li>Nutrition and habit coaching that fits real life</li>
+          <li>Stress-busting breathwork &amp; mobility for the busy planning months</li>
+          <li>Regular check-ins, progress tracking and adjustments</li>
+          <li>Safe, experienced support if you're coming back from injury</li>
+        </ul>
+        <a href="#contact" class="btn solid">Book a free consultation</a>
+      </div>
+      <div class="photo-col reveal">
+        <div class="photo-stack">
+          <!-- Replace with your own photo of you training a happy bride -->
+          <img class="main" src="https://images.unsplash.com/photo-1750698544794-bf1cd7038f92?auto=format&fit=crop&w=1000&q=75" alt="Trainer and happy client together in the gym">
+          <img class="inset" src="https://images.unsplash.com/photo-1758875569256-f37c438cac65?auto=format&fit=crop&w=600&q=75" alt="Client lifting weights with her trainer" loading="lazy">
+        </div>
+      </div>
+    </div>
+
+    <div class="formats">
+      <div class="fcard reveal">
+        <div class="mark"><svg viewBox="0 0 40 40"><rect x="6" y="9" width="28" height="19" rx="2"/><path d="M14 33h12M20 28v5"/></svg></div>
+        <span class="len">Anywhere</span>
+        <h3>Online Coaching</h3>
+        <p>App-based programme, video form checks, nutrition guidance and weekly check-ins – train on your schedule, wherever you are.</p>
+      </div>
+      <div class="fcard reveal">
+        <div class="mark"><svg viewBox="0 0 40 40"><circle cx="14" cy="12" r="4"/><circle cx="26" cy="12" r="4"/><path d="M6 32c0-6 4-10 8-10s8 4 8 10M18 32c0-6 4-10 8-10s8 4 8 10"/></svg></div>
+        <span class="len">North London</span>
+        <h3>1:1 Personal Training</h3>
+        <p>Hands-on, face-to-face sessions with Liz – expert coaching, technique and accountability every step of the way.</p>
+      </div>
+      <div class="fcard reveal">
+        <div class="mark"><svg viewBox="0 0 40 40"><rect x="7" y="9" width="26" height="24" rx="2"/><path d="M7 16h26M14 5v7M26 5v7"/><path d="M16 25l3 3 6-6"/></svg></div>
+        <span class="len">6 · 9 · 12 months</span>
+        <h3>Your Timeline</h3>
+        <p>Choose the programme length that fits your date. Hybrid options mixing online and in-person are available too.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ABOUT / QUALIFICATIONS ===================== -->
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="split">
+      <div class="reveal">
+        <!-- Replace with a photo of Liz -->
+        <img class="about-img" src="https://images.unsplash.com/photo-1589860518300-9eac95f784d9?auto=format&fit=crop&w=900&q=75" alt="Liz Marsland, personal trainer" loading="lazy">
+      </div>
+      <div class="copy reveal">
+        <div class="mark">
+          <svg viewBox="0 0 40 40"><circle cx="20" cy="15" r="9"/><path d="M14 22l-3 13 9-5 9 5-3-13"/></svg>
+        </div>
+        <p class="eyebrow">Meet your coach</p>
+        <h2>Liz Marsland</h2>
+        <p>With over 20 years of coaching experience, Liz blends sports science, strength training and holistic wellbeing to help clients feel their absolute best. Having worked alongside physiotherapists in South Africa, she's also experienced in supporting athletes and clients returning from injury.</p>
+
+        <div class="stats">
+          <div class="stat"><b>20+</b><small>Years coaching</small></div>
+          <div class="stat"><b>7+</b><small>Years teaching yoga</small></div>
+        </div>
+
+        <div class="quals">
+          <div class="qual"><svg viewBox="0 0 26 26"><path d="M2 10l11-5 11 5-11 5z"/><path d="M6 12v5c0 2 3 4 7 4s7-2 7-4v-5"/></svg><div><strong>BSc Sports Science</strong><span>Degree-qualified</span></div></div>
+          <div class="qual"><svg viewBox="0 0 26 26"><path d="M3 10v6M6 7v12M20 7v12M23 10v6M6 13h14"/></svg><div><strong>Level 3 &amp; 4 PT</strong><span>Personal Trainer</span></div></div>
+          <div class="qual"><svg viewBox="0 0 26 26"><path d="M13 4v18M6 9l7 4 7-4M6 17l7-4 7 4"/></svg><div><strong>CrossFit Level 2</strong><span>Trainer</span></div></div>
+          <div class="qual"><svg viewBox="0 0 26 26"><circle cx="13" cy="5" r="2.5"/><path d="M5 12h16M13 9v7l-4 7M13 16l4 7"/></svg><div><strong>Yoga Teacher</strong><span>7+ years teaching</span></div></div>
+          <div class="qual"><svg viewBox="0 0 26 26"><path d="M4 14c4-6 14-6 18 0M7 18c3-3 9-3 12 0"/><circle cx="13" cy="21" r="1.2"/></svg><div><strong>Breathwork &amp; Sound Bath</strong><span>Facilitator &amp; practitioner</span></div></div>
+          <div class="qual"><svg viewBox="0 0 26 26"><path d="M5 20c2-8 6-12 8-12s6 4 8 12"/><path d="M9 13c1 2 7 2 8 0"/></svg><div><strong>Massage Therapist</strong><span>Recovery &amp; soft tissue</span></div></div>
+        </div>
+
+        <p class="clients">Trusted by corporate wellness clients including <b>Clifford Chance</b>, <b>The New York Times</b>, <b>Logicalis</b>, <b>Rand Merchant Bank</b> and <b>Workspace Group</b>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SERVICE 2: WEDDING CRECHERS ===================== -->
+<section class="crechers" id="crechers">
+  <div class="wrap">
+    <div class="split reverse">
+      <div class="photo-col reveal">
+        <!-- Replace with your own photos of a wedding creche -->
+        <div class="kids-gallery">
+          <img src="https://images.unsplash.com/photo-1764269713633-b406796ba493?auto=format&fit=crop&w=1000&q=75" alt="Carer with children at a wedding" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1733512570252-3ceac876a5a7?auto=format&fit=crop&w=600&q=75" alt="Group of happy young children" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1776267322628-b51872099d01?auto=format&fit=crop&w=600&q=75" alt="Bride hugging a young boy in a garden" loading="lazy">
+        </div>
+      </div>
+      <div class="copy reveal">
+        <div class="mark">
+          <svg viewBox="0 0 40 40"><ellipse cx="20" cy="15" rx="8" ry="10"/><path d="M20 25l-2 3h4z"/><path d="M20 28c0 4-3 5-3 8"/></svg>
+        </div>
+        <p class="eyebrow">Service two</p>
+        <h2>Wedding <span class="bang">Crechers!</span></h2>
+        <p>Let the grown-ups dance, toast and celebrate – while the little ones have the time of their lives. My team and I come to your venue and provide a dedicated, safe and fun children's space for the whole duration of your wedding.</p>
+        <p>Parents get some well-deserved time off, the couple gets a calmer ceremony and speeches, and the kids go home with happy memories of their own.</p>
+        <ul class="ticks">
+          <li>Dedicated, attentive carers for the whole celebration</li>
+          <li>Themed games, crafts, movement play &amp; quiet corners</li>
+          <li>Ceremony, speeches &amp; evening cover – you choose the hours</li>
+          <li>All ages catered for, from toddlers to tweens</li>
+        </ul>
+        <a href="#contact" class="btn solid">Check availability</a>
+      </div>
+    </div>
+
+    <div class="features">
+      <div class="feature reveal">
+        <div class="mark"><svg viewBox="0 0 40 40"><path d="M20 5l12 5v9c0 8-5 13-12 16C13 32 8 27 8 19v-9z"/><path d="M15 20l4 4 7-7"/></svg></div>
+        <h3>Safety first</h3>
+        <p>Secure sign-in and sign-out, only to named adults, with constant supervision.</p>
+      </div>
+      <div class="feature reveal">
+        <div class="mark"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="14"/><circle cx="20" cy="20" r="5"/><path d="M20 6v4M20 30v4M6 20h4M30 20h4"/></svg></div>
+        <h3>Full attention</h3>
+        <p>Generous carer-to-child ratios so every child is seen, heard and looked after.</p>
+      </div>
+      <div class="feature reveal">
+        <div class="mark"><svg viewBox="0 0 40 40"><path d="M20 6l4 9 10 1-7 7 2 10-9-5-9 5 2-10-7-7 10-1z"/></svg></div>
+        <h3>Fun activities</h3>
+        <p>Crafts, games, dance, storytime and active play, themed to your wedding.</p>
+      </div>
+      <div class="feature reveal">
+        <div class="mark"><svg viewBox="0 0 40 40"><path d="M8 30c2-6 6-9 12-9s10 3 12 9"/><path d="M12 15c0-5 4-8 8-8s8 3 8 8"/><path d="M6 18h28"/></svg></div>
+        <h3>Time off for adults</h3>
+        <p>Parents relax and enjoy the party, knowing their children are happy and safe.</p>
+      </div>
+    </div>
+
+    <!-- Please check these points match your team's actual checks and training before publishing -->
+    <div class="promise reveal">
+      <div class="mark">
+        <svg viewBox="0 0 40 40"><path d="M20 34S6 25 6 15a7 7 0 0 1 14-2 7 7 0 0 1 14 2c0 10-14 19-14 19z"/></svg>
+      </div>
+      <div>
+        <h3>Our safety promise</h3>
+        <ul>
+          <li>DBS-checked team members</li>
+          <li>Paediatric first aid trained</li>
+          <li>Venue risk assessment in advance</li>
+          <li>Allergy &amp; medical info collected</li>
+          <li>Named-adult collection only</li>
+          <li>Fully insured</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== HOW IT WORKS ===================== -->
+<section class="steps">
+  <div class="wrap">
+    <div class="center reveal">
+      <div class="mark">
+        <svg viewBox="0 0 40 40"><path d="M6 30h7v-7h7v-7h7V9h7"/></svg>
+      </div>
+      <p class="eyebrow">Simple from start to finish</p>
+      <h2>How it works</h2>
+    </div>
+    <div class="step-grid">
+      <div class="step reveal"><h3>Get in touch</h3><p>Tell us your date, your goals and which service you're interested in.</p></div>
+      <div class="step reveal"><h3>Free consultation</h3><p>A relaxed chat to understand what you need and plan the details.</p></div>
+      <div class="step reveal"><h3>Your tailored plan</h3><p>A training programme mapped to your date, or a crèche plan for your venue.</p></div>
+      <div class="step reveal"><h3>Enjoy the day</h3><p>Feel amazing, celebrate freely, and let us take care of the rest.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACT ===================== -->
+<section class="contact center" id="contact">
+  <div class="wrap reveal">
+    <div class="mark">
+      <svg viewBox="0 0 40 40"><rect x="6" y="10" width="28" height="20" rx="2"/><path d="M6 12l14 10 14-10"/></svg>
+    </div>
+    <p class="eyebrow">Now booking weddings &amp; occasions</p>
+    <h2>Let's make your day blissful</h2>
+    <p>Places are limited for both services, especially in peak wedding season. Get in touch to book your free consultation or check crèche availability for your date.</p>
+    <div class="ctas">
+      <!-- Replace YOUR-EMAIL@example.com with your real email address -->
+      <a href="mailto:YOUR-EMAIL@example.com?subject=Wedding%20Bliss%20enquiry" class="btn solid">Email us</a>
+      <a href="https://www.instagram.com/lmfit_trainer" target="_blank" rel="noopener" class="btn">Message on Instagram</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="social">
+      <a href="https://www.instagram.com/lmfit_trainer" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6"/></svg></a>
+      <a href="https://lmfit.uk" target="_blank" rel="noopener" aria-label="Website"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg></a>
+    </div>
+    <p>Wedding Bliss by <a href="https://lmfit.uk" target="_blank" rel="noopener">LMFIT</a> · North London · © <span id="yr"></span></p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  const nav = document.getElementById('nav');
+  addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 40));
+  document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', () => document.getElementById('links').classList.remove('open')));
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), {threshold: .12});
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
