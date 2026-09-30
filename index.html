@@ -169,7 +169,8 @@
   /* ABOUT / QUALS */
   .about{background:var(--charcoal)}
   .about .split{grid-template-columns:.9fr 1.1fr}
-  .about-img{width:100%;max-width:340px;margin:0 auto;display:block;aspect-ratio:4/5;object-fit:cover;filter:saturate(.9)}
+  .about-photos{display:flex;gap:12px;max-width:420px;margin:0 auto}
+ .about-img{flex:1;min-width:0;width:100%;display:block;aspect-ratio:3/4;object-fit:cover;object-position:center top;filter:saturate(.9)}
   .quals{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:28px}
   .qual{display:flex;gap:14px;align-items:flex-start;padding:16px;background:rgba(255,255,255,.05);border-left:2px solid var(--blush)}
   .qual svg{flex:0 0 26px;width:26px;height:26px;stroke:#fff;fill:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;margin-top:2px}
@@ -225,6 +226,11 @@
   .quote.blue::before{color:var(--blue)}
   .quote.blue figcaption span{color:var(--blue-deep)}
   @media (max-width:960px){.quote-grid{grid-template-columns:1fr;max-width:620px;margin-left:auto;margin-right:auto}}
+  .friend-note{display:flex;align-items:center;gap:48px;margin:64px auto 0;max-width:860px}
+  .friend-note img{width:300px;height:auto;aspect-ratio:1/1;object-fit:cover;object-position:center 30%;flex-shrink:0;box-shadow:0 18px 40px rgba(62,68,77,.14);border:10px solid var(--white)}
+  .friend-note p{font-family:var(--serif);font-style:italic;font-size:1.35rem;line-height:1.5;color:var(--charcoal)}
+  .friend-note span{display:block;margin-top:14px;font-family:inherit;font-style:normal;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--rose-deep)}
+  @media (max-width:760px){.friend-note{flex-direction:column;gap:28px;text-align:center}.friend-note img{width:240px}}
 
   .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 
@@ -407,7 +413,10 @@
   <div class="wrap">
     <div class="split">
       <div class="reveal">
-        <img class="about-img" src="/images/liz-coaching.jpeg" alt="Liz Marsland, bridal and wedding fitness personal trainer, coaching a client in the gym" loading="lazy">
+        <div class="about-photos">
+          <img class="about-img" src="/images/liz-dressed-up.jpeg" alt="Liz Marsland in a navy lace dress in a garden" loading="lazy">
+          <img class="about-img" src="/images/liz-coaching.jpeg" alt="Liz Marsland, bridal and wedding fitness personal trainer, coaching a client in the gym" loading="lazy">
+        </div>
       </div>
       <div class="copy reveal">
         <div class="mark">
@@ -553,6 +562,10 @@
         <blockquote><p>The crèche was the best decision we made. Parents relaxed, the kids had a brilliant time, and our ceremony was calm and quiet.</p></blockquote>
         <figcaption><strong>Hannah &amp; Tom</strong><span>Wedding Crechers</span></figcaption>
       </figure>
+    </div>
+    <div class="friend-note reveal">
+      <img src="/images/liz-with-friend.jpeg" alt="Liz smiling in a selfie with a friend and client" loading="lazy" width="1206" height="1179">
+      <p>So many of my brides become friends for life. Seeing them feel strong, happy and confident on their wedding day is the best part of what I do.<span>Liz, Wedding Bliss</span></p>
     </div>
   </div>
 </section>
